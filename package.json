@@ -1,6 +1,6 @@
 {
   "name": "hubot-rules",
-  "description": "A hubot that explains the rules",
+  "description": "A hubot script that explains the rules",
   "version": "0.0.0",
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",

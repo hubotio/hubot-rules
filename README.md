@@ -1,6 +1,6 @@
 # hubot-rules
 
-A hubot that explains the rules
+A hubot script that explains the rules
 
 See [`src/rules.coffee`](src/rules.coffee) for full documentation.
 
