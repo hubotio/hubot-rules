@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hubotio/hubot-rules.svg?branch=master)](https://travis-ci.org/hubotio/hubot-rules) [![Coverage Status](https://coveralls.io/repos/github/hubotio/hubot-rules/badge.svg?branch=master)](https://coveralls.io/github/hubotio/hubot-rules?branch=master)
+
 # hubot-rules
 
 A hubot script that explains the rules
