@@ -1,16 +1,16 @@
 {
   "name": "hubot-rules",
   "description": "A hubot script that explains the rules",
-  "version": "0.1.2",
+  "version": "0.0.0-development",
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-rules.git"
+    "url": "https://github.com/hubotio/hubot-rules.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-rules/issues"
+    "url": "https://github.com/hubotio/hubot-rules/issues"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -25,12 +25,14 @@
     "nyc": "^11.0.3",
     "sinon": "^1.13.0",
     "sinon-chai": "^2.7.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "semantic-release": "^6.3.6"
   },
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
     "test": "nyc --reporter=html --reporter=text mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }
