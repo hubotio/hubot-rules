@@ -18,14 +18,19 @@
   },
   "devDependencies": {
     "chai": "^2.1.1",
+    "coveralls": "^2.13.1",
     "hubot": "^3.0.0",
     "hubot-mock-adapter-v3": "^1.0.1",
     "mocha": "^2.1.0",
+    "nyc": "^11.0.3",
     "sinon": "^1.13.0",
-    "sinon-chai": "^2.7.0"
+    "sinon-chai": "^2.7.0",
+    "standard": "^10.0.2"
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "pretest": "standard",
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   }
 }
