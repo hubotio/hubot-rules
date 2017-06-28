@@ -32,6 +32,6 @@
   },
   "main": "index.coffee",
   "scripts": {
-    "test": "grunt test"
+    "test": "mocha --reporter spec --require coffee-script test/**/*.coffee"
   }
 }
