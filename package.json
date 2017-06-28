@@ -4,7 +4,13 @@
   "version": "0.0.0-development",
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
-  "keywords": "hubot, hubot-scripts",
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "engines": {
+    "node": ">4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/hubotio/hubot-rules.git"
