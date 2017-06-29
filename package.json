@@ -2,6 +2,9 @@
   "name": "hubot-rules",
   "description": "A hubot script that explains the rules",
   "version": "0.0.0-development",
+  "publishConfig": {
+    "tag": "next"
+  },
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
   "keywords": [
