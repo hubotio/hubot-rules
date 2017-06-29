@@ -1,16 +1,22 @@
 {
   "name": "hubot-rules",
   "description": "A hubot script that explains the rules",
-  "version": "0.1.2",
+  "version": "0.0.0-development",
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
-  "keywords": "hubot, hubot-scripts",
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "engines": {
+    "node": "> 4.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-rules.git"
+    "url": "https://github.com/hubotio/hubot-rules.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-rules/issues"
+    "url": "https://github.com/hubotio/hubot-rules/issues"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -18,20 +24,21 @@
   },
   "devDependencies": {
     "chai": "^2.1.1",
-    "coffee-script": "1.6.3",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-mocha-test": "~0.12.7",
-    "grunt-release": "~0.11.0",
-    "hubot": "2.x",
-    "matchdep": "~0.3.0",
+    "coveralls": "^2.13.1",
+    "hubot": "^3.0.0",
+    "hubot-mock-adapter-v3": "^1.0.1",
     "mocha": "^2.1.0",
+    "nyc": "^11.0.3",
     "sinon": "^1.13.0",
-    "sinon-chai": "^2.7.0"
+    "sinon-chai": "^2.7.0",
+    "standard": "^10.0.2",
+    "semantic-release": "^6.3.6"
   },
-  "main": "index.coffee",
+  "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "pretest": "standard",
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   }
 }
