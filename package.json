@@ -24,7 +24,8 @@
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "mocha --exit"
+    "test": "nyc --reporter=html --reporter=text mocha --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "chai": "^4.3.7",
@@ -34,5 +35,9 @@
     "sinon": "^15.1.0",
     "sinon-chai": "^3.7.0",
     "standard": "^17.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.1",
+    "nyc": "^15.1.0"
   }
 }
