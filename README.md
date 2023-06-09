@@ -1,8 +1,6 @@
-[![Build Status](https://travis-ci.org/hubotio/hubot-rules.svg?branch=master)]
+![Build Status](https://github.com/hubotio/hubot-rules/actions/workflows/build.yml/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/hubotio/hubot-rules/badge.svg?branch=main)](https://coveralls.io/github/hubotio/hubot-rules?branch=main)
 
-(https://travis-ci.org/hubotio/hubot-rules) 
-
-[![Coverage Status](https://coveralls.io/repos/github/hubotio/hubot-rules/badge.svg?branch=master)](https://coveralls.io/github/hubotio/hubot-rules?branch=master)
 
 # hubot-rules
 
