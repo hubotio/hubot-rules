@@ -1,7 +1,5 @@
 ![Build Status](https://github.com/hubotio/hubot-rules/actions/workflows/build.yml/badge.svg)
 
-[![Coverage Status](https://coveralls.io/repos/github/hubotio/hubot-rules/badge.svg?branch=main)](https://coveralls.io/github/hubotio/hubot-rules?branch=main)
-
 # hubot-rules
 
 A hubot script that explains the rules
