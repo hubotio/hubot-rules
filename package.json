@@ -36,7 +36,6 @@
     "standard": "^17.1.0"
   },
   "devDependencies": {
-    "mockery": "^2.1.0",
     "nyc": "^15.1.0"
   }
 }

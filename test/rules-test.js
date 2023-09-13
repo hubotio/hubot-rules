@@ -6,7 +6,7 @@
 const path = require('path')
 
 const chai = require('chai')
-const mockery = require('mockery')
+const { hook, reset } = require('./fixtures/RequireMocker.js')
 const Hubot = require('hubot')
 
 const expect = chai.expect
@@ -25,11 +25,7 @@ describe('rules', () => {
   let robot, user
 
   beforeEach(() => {
-    mockery.enable({
-      warnOnReplace: false,
-      warnOnUnregistered: false
-    })
-    mockery.registerMock('hubot-mock-adapter', require('./fixtures/MockAdapter.js'))
+    hook('hubot-mock-adapter', require('./fixtures/MockAdapter.js'))
     robot = new Robot(null, 'mock-adapter', false, 'hubot')
     robot.loadFile(path.resolve('src/'), 'rules.js')
     robot.adapter.on('connected', () => robot.brain.userForId('1', {
@@ -43,7 +39,7 @@ describe('rules', () => {
 
   afterEach(() => {
     robot.shutdown()
-    mockery.disable()
+    reset()
   })
 
   it('tells the rules', (done) => {
