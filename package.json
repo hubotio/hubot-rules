@@ -3,7 +3,7 @@
   "description": "A hubot script that explains the rules",
   "version": "0.0.0-development",
   "publishConfig": {
-    "tag": "next"
+    "access": "public"
   },
   "author": "Josh Nichols <technicalpickles@github.com>",
   "license": "MIT",
@@ -12,7 +12,8 @@
     "hubot-scripts"
   ],
   "engines": {
-    "node": "> 4.0.0"
+    "node": "> 16.20.2",
+    "npm": "> 8.19.4"
   },
   "repository": {
     "type": "git",
@@ -27,8 +28,10 @@
     "test": "node --test",
     "coverage": "node --test --experimental-test-coverage"
   },
-  "dependencies": {
-    "hubot": "^9.0.0",
+  "peerDependencies": {
+    "hubot": ">= 9.0.0"
+  },
+  "devDependencies": {
     "standard": "^17.1.0"
   }
 }
