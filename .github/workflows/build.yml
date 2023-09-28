@@ -32,3 +32,8 @@ jobs:
         run: npm audit signatures
       - name: Run Tests
         run: npm run coverage
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
