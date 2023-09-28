@@ -24,18 +24,11 @@
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
-    "test": "nyc --reporter=html --reporter=text mocha --exit",
-    "coverage": "nyc report --reporter=text-lcov"
+    "test": "node --test",
+    "coverage": "node --test --experimental-test-coverage"
   },
   "dependencies": {
-    "chai": "^4.3.7",
-    "hubot": "^4.0.0",
-    "mocha": "^10.2.0",
-    "sinon": "^15.1.0",
-    "sinon-chai": "^3.7.0",
+    "hubot": "^9.0.0",
     "standard": "^17.1.0"
-  },
-  "devDependencies": {
-    "nyc": "^15.1.0"
   }
 }
