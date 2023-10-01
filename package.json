@@ -23,6 +23,10 @@
     "url": "https://github.com/hubotio/hubot-rules/issues"
   },
   "main": "index.js",
+  "files": [
+    "index.js",
+    "src"
+  ],
   "scripts": {
     "pretest": "standard",
     "test": "node --test",
