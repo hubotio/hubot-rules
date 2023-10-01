@@ -1,4 +1,4 @@
-![Build Status](https://github.com/hubotio/hubot-rules/actions/workflows/build.yml/badge.svg)
+![Build Status](https://github.com/hubotio/hubot-rules/actions/workflows/pipeline.yml/badge.svg)
 
 # hubot-rules
 
