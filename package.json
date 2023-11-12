@@ -33,7 +33,7 @@
     "coverage": "node --test --experimental-test-coverage"
   },
   "peerDependencies": {
-    "hubot": ">= 9.0.0"
+    "hubot": ">= 9 || 0.0.0-development"
   },
   "devDependencies": {
     "standard": "^17.1.0"
