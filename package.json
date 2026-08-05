@@ -33,10 +33,7 @@
     "coverage": "node --test --experimental-test-coverage"
   },
   "peerDependencies": {
-    "hubot": ">= 9 || 0.0.0-development"
-  },
-  "devDependencies": {
-    "standard": "^17.1.0"
+    "hubot": ">= 14 || 0.0.0-development"
   },
   "release": {
     "branches": [
@@ -44,5 +41,8 @@
       "next"
     ],
     "dryRun": false
+  },
+  "dependencies": {
+    "standard": "^17.1.2"
   }
 }

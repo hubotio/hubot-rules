@@ -2,7 +2,7 @@
 const { describe, it, beforeEach, afterEach } = require('node:test')
 const path = require('path')
 const assert = require('node:assert/strict')
-const { hook, reset } = require('./fixtures/RequireMocker.js')
+const MockAdapter = require('./fixtures/MockAdapter.js')
 const Hubot = require('hubot')
 
 const Robot = Hubot.Robot
@@ -17,8 +17,7 @@ describe('rules', () => {
   let robot, user
 
   beforeEach(async () => {
-    hook('mock-adapter', require('./fixtures/MockAdapter.js'))
-    robot = new Robot('mock-adapter', false, 'hubot')
+    robot = new Robot(MockAdapter, false, 'hubot')
     await robot.loadFile(path.resolve('src/'), 'rules.js')
     await robot.loadAdapter()
     robot.adapter.on('connected', () => robot.brain.userForId('1', {
@@ -32,7 +31,6 @@ describe('rules', () => {
 
   afterEach(() => {
     robot.shutdown()
-    reset()
   })
 
   it('tells the rules', async () => {

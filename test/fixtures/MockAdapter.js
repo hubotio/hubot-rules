@@ -1,6 +1,6 @@
 'use strict'
 
-const Adapter = require('hubot/src/adapter.js')
+const { Adapter } = require('hubot')
 
 class MockAdapter extends Adapter {
   async send (envelope, ...strings) {
@@ -28,4 +28,6 @@ class MockAdapter extends Adapter {
   }
 }
 
-module.exports.use = robot => new MockAdapter(robot)
+module.exports = {
+  use: robot => new MockAdapter(robot)
+}
